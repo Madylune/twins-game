@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Less -->
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js" ></script>
+
+    <title>Find His Twin !</title>
+</head>
+<body onload="changeColor()">
+    <header>
+        <h1 class="title">Find His Twin !</h1>
+    </header>
+    <div class="main-container">
+        <div class="game-container">
+            <div class="game-space">
+                <div id="first" class="subject spinning"></div>
+                <div id="second" class="subject spinning"></div>
+            </div>
+            <div class="match">
+                <button type="button" class="match-btn" onclick="checkMatch(), stopGame()">MATCH</button>
+            </div>
+        </div>
+        <div class="informations-container">
+            <p class="score">Ton score: <span class="current-score"></span></p>
+        </div>
+        <div class="twins-img"> 
+            <img class="happy" src="images/twins.png" alt="twins">
+            <img class="sad" src="images/twins2.png" alt="twins">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

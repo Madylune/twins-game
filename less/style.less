@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Chalkduster', fantasy;
+    background-color: #333;
+    color: white;
+    .title {
+        text-align: center;
+        font-size: 60px;
+    }
+    .main-container {
+        position: relative;
+        .game-container {
+            .game-space {
+                display: flex;
+                justify-content: space-around;
+                width: 60%;
+                margin: 50px auto;
+
+                @keyframes infinite-spinning {
+                    from {
+                      transform: rotate(0deg);
+                    }
+                    to {
+                      transform: rotate(360deg);
+                    }
+                }
+                .spinning {
+                    animation: infinite-spinning 5s infinite .5s;
+                }
+                .subject {
+                    height: 200px;
+                    width: 200px;
+                    border: 1px solid black;
+                    background-color: pink;
+                }
+            }
+            .match {
+                text-align: center;
+
+                p {
+                    font-size: 60px;
+                    font-weight: bold;
+                }
+
+                @keyframes glowing {
+                    0% { box-shadow: 0 0 -10px #fff; }
+                    40% { box-shadow: 0 0 20px #fff; }
+                    60% { box-shadow: 0 0 20px #fff; }
+                    100% { box-shadow: 0 0 -10px #fff; }
+                }
+                .match-btn {
+                    cursor: pointer;
+                    height: 100px;
+                    width: 300px;
+                    border-radius: 5px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    background-color:hotpink;
+                    color: #000;
+                    animation: glowing 2000ms infinite;
+                }
+            }
+        }
+        .informations-container {
+            text-align: center;
+            margin-top: 50px; 
+            .score {
+                font-size: 30px;
+            }
+        }
+        .twins-img {
+            position: absolute;
+            top: 50%;
+            img {
+                height: 400px;
+            }
+            .sad {
+                display: none;
+            }
+        }
+    }
+}
