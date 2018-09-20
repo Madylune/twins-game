@@ -1,6 +1,5 @@
-# Find his Twin Game !
+# Find his Twin !
 
-You have to find the twins.
 This game is made in HTML, CSS(LESS) and JavaScript.
 
 Rules:
