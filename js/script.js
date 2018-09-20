@@ -42,8 +42,8 @@ function stopGame() {
         document.querySelector('.sad').style.display = 'block';
 
         //Remove match btn and put game over text
-        const element = document.querySelector('.match-btn');
-        element.parentNode.removeChild(element);
+        const div = document.querySelector('.match-btn');
+        div.parentNode.removeChild(div);
         const para = document.createElement("p");
         const node = document.createTextNode("GAME OVER !!");
         para.appendChild(node);
