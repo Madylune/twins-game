@@ -37,10 +37,6 @@ function stopGame() {
         el1.classList.remove("spinning");
         el2.classList.remove("spinning");
 
-        //Change mood of twins
-        document.querySelector('.happy').style.display = 'none';
-        document.querySelector('.sad').style.display = 'block';
-
         //Remove match btn and put game over text
         const div = document.querySelector('.match-btn');
         div.parentNode.removeChild(div);
@@ -49,5 +45,22 @@ function stopGame() {
         para.appendChild(node);
         const element = document.querySelector('.match');
         element.appendChild(para);
+        document.querySelector('.play-again').style.display = 'block'
+    }
+    if (score === 10) {
+        clearInterval(intervalID);
+        //Stop spinning effect
+        el1.classList.remove("spinning");
+        el2.classList.remove("spinning");
+
+        //Remove match btn and put game over text
+        const div = document.querySelector('.match-btn');
+        div.parentNode.removeChild(div);
+        const para = document.createElement("p");
+        const node = document.createTextNode("CONGRATS !!");
+        para.appendChild(node);
+        const element = document.querySelector('.match');
+        element.appendChild(para);
+        document.querySelector('.play-again').style.display = 'block'
     }
 }
